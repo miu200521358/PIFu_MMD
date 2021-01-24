@@ -1,0 +1,28 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "apps.eval",
+            "type": "python",
+            "request": "launch",
+            "program": "./apps/eval.py",
+            "stopOnEntry": false,
+            "args": [
+                "--name", "pifu_demo",
+                "--batch_size", "1",
+                "--num_stack", "4",
+                "--num_hourglass", "2",
+                "--resolution", "256",
+                "--hg_down", "ave_pool",
+                "--norm", "group",
+                "--norm_color", "group",
+                "--test_folder_path", "./sample_images/kai2",
+                "--load_netG_checkpoint_path", "./checkpoints/net_G", 
+                "--load_netC_checkpoint_path", "./checkpoints/net_C"
+            ]
+        },
+    ]
+}

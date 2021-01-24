@@ -1,0 +1,470 @@
+conda create -n pifu pip python=3.7
+
+conda activate pifu
+
+conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=9.2 -c pytorch
+
+pip install -r requirements.txt
+
+devadmin@GARNET:/mnt/c/MMD/PIFu_MMD$ sh ./scripts/download_trained_model.sh
+
+python ./apps/eval.py --name pifu_demo --batch_size 1 --mlp_dim 1024 --mlp_dim_color 1024 --num_stack 4 --num_hourglass 2 --resolution 256 --hg_down ave_pool --norm group --norm_color group --test_folder_path ./sample_images/ichigo --load_netG_checkpoint_path ./checkpoints/net_G --load_netC_checkpoint_path ./checkpoints/net_C
+
+---------------------------
+【Train】
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------
+
+
+sudo apt update && sudo apt upgrade
+
+sudo apt install mesa-utils
+
+devadmin@GARNET:/mnt/c/Users/celes$ glxinfo | grep version
+Error: unable to open display
+
+# ディスプレイの導入
+sudo apt install x11-apps
+
+echo "export DISPLAY=\$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0.0" >> ~/.bashrc
+
+source ~/.bashrc
+
+
+devadmin@GARNET:/mnt/c/Users/celes/to_PiFu_MMD$ glxinfo | grep :
+name of display: 192.168.66.225:0.0
+display: 192.168.66.225:0  screen: 0
+direct rendering: No (LIBGL_ALWAYS_INDIRECT set)
+server glx vendor string: SGI
+server glx version string: 1.4
+server glx extensions:
+client glx vendor string: Mesa Project and SGI
+client glx version string: 1.4
+client glx extensions:
+GLX version: 1.4
+GLX extensions:
+OpenGL vendor string: NVIDIA Corporation
+OpenGL renderer string: GeForce GTX 1080/PCIe/SSE2
+OpenGL version string: 1.4 (4.6.0 NVIDIA 441.66)
+OpenGL extensions:
+634 GLXFBConfigs:
+devadmin@GARNET:/mnt/c/Users/celes/to_PiFu_MMD$
+
+
+# ----------------------------
+
+sudo sh Anaconda3-2020.11-Linux-x86_64.sh
+
+sudo chown -R devadmin /home/devadmin/
+
+conda create -n pifu pip python=3.7
+
+conda activate pifu
+
+pip install -r requirements.txt
+
+conda install -c conda-forge pyembree 
+
+# gccインストール
+sudo apt install build-essential
+
+sudo apt install libopenexr-dev
+
+pip install pyexr
+
+# GLUT ( freeglut)をインストールしていきます。
+sudo apt-get install freeglut3 freeglut3-dev
+
+sudo apt-get install python-opengl
+pip install PyOpenGL PyOpenGL_accelerate
+
+# Mesa 3Dの開発パッケージをインストールしていきます。
+sudo apt install libglu1-mesa-dev mesa-common-dev libegl1 libgl1-mesa-dri libegl1-mesa libgbm1
+
+
+
+python -m apps.render_data -i /mnt/c/MMD/PIFu_MMD/rp_dennis_posed_004_OBJ -o /mnt/c/MMD/PIFu_MMD/train_data -e
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sudo apt update
+sudo apt upgrade
+
+sudo apt install mesa-utils
+
+# ディスプレイの導入
+sudo apt install x11-apps
+
+echo "export DISPLAY=\$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0.0" >> ~/.bashrc
+
+source ~/.bashrc
+
+xeyes &
+
+# --------------
+
+# Anaconda インストール
+
+sudo sh Anaconda3-2020.11-Linux-x86_64.sh
+
+sudo chown 1000:1000 /home/devadmin/.conda/envs/.conda_envs_dir_test
+
+sudo chown 1000:1000 /home/devadmin/.conda/pkgs/urls.txt
+
+sudo chown -R devadmin /home/devadmin/
+
+conda create -n pifu pip python=3.7
+
+conda activate pifu
+
+pip install -r requirements.txt
+
+echo "export DISPLAY=\$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0.0" >> ~/.bashrc
+
+source ~/.bashrc
+
+conda activate pifu
+
+xeyes &
+
+# --------------
+
+# バージョン確認
+glxinfo | grep version
+
+glxinfo | grep OpenGL
+
+glxinfo | grep mesa
+
+# -------------
+# mesa
+
+sudo add-apt-repository ppa:kisak/kisak-mesa
+sudo apt update
+sudo apt upgrade
+sudo apt install mesa
+
+sudo add-apt-repository ppa:oibaf/graphics-drivers
+
+sudo apt install mesa-utils mesa-utils-extra
+
+# -------------
+# nvidia
+
+sudo apt install build-essential inxi
+
+inxi -G
+
+(pifu) devadmin@GARNET:/mnt/c/MMD/PIFu_MMD$ inxi -G
+Graphics:  Card: Failed to Detect Video Card!
+           Display Server: X.org 12.9 driver: N/A Resolution: 3200x1080@0.00hz
+           OpenGL: renderer: GeForce GTX 1080/PCIe/SSE2 version: 1.4 (4.6.0 NVIDIA 441.66)
+
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt upgrade
+
+sudo apt install ubuntu-drivers-common
+
+sudo apt install nvidia-driver-440
+
+(pifu) devadmin@GARNET:/mnt/c/MMD/PIFu_MMD$ glxinfo | grep version
+server glx version string: 1.4
+client glx version string: 1.4
+GLX version: 1.4
+OpenGL version string: 1.4 (4.6.0 NVIDIA 441.66)
+(pifu) devadmin@GARNET:/mnt/c/MMD/PIFu_MMD$
+
+# -------------------
+
+sudo add-apt-repository -y ppa:ubuntu-x-swat/updates && sudo apt update && sudo apt dist-upgrade
+
+sudo add-apt-repository ppa:kisak/kisak-mesa
+sudo apt-get dist-upgrade
+
+# ----------------------
+
+https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.2.89-1_amd64.deb
+
+sudo apt install ./cuda-repo-ubuntu1804_10.2.89-1_amd64.deb
+
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+
+sudo apt update
+sudo apt upgrade
+
+
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+
+sudo find /usr -iname "*GL.so*" -exec ls -l -- {} +
+
+conda install -c conda-forge pyembree 
+
+sudo apt install libopenexr-dev
+
+pip install pyexr
+
+# GLUT ( freeglut)をインストールしていきます。
+sudo apt-get install freeglut3 freeglut3-dev
+
+python -m apps.render_data -i /mnt/c/MMD/PIFu_MMD/rp_dennis_posed_004_OBJ -o /mnt/c/MMD/PIFu_MMD/train_data
+
+X Error of failed request:  GLXBadFBConfig
+  Major opcode of failed request:  149 (GLX)
+  Minor opcode of failed request:  34 ()
+  Serial number of failed request:  23
+  Current serial number in output stream:  22
+
+
+python -m apps.render_data -i /mnt/c/MMD/PIFu_MMD/rp_dennis_posed_004_OBJ -o /mnt/c/MMD/PIFu_MMD/train_data -e
+
+ImportError: Cannot initialize a headless EGL display.
+
+# ---------------------
+
+sudo apt-get install libglfw3-dev libgles2-mesa-dev
+
+sudo apt install libglu1-mesa-dev mesa-common-dev
+
+sudo add-apt-repository ppa:ubuntu-x-swat/updates
+sudo apt dist-upgrade
+
+sudo apt install libgles2-mesa-dev libegl1-mesa-dev xorg-dev
+
+# ---------------------
+
+sudo apt-get install python-opengl
+pip install PyOpenGL PyOpenGL_accelerate
+
+sudo find /usr -iname "*GL.so*" -exec ls -l -- {} +
+
+
+
+python -m apps.render_data -i /mnt/c/MMD/PIFu_MMD/rp_dennis_posed_004_OBJ -o /mnt/c/MMD/PIFu_MMD/train_data -e
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libGL error: No matching fbConfigs or visuals found
+libGL error: failed to load driver: swrast
+
+sudo find /usr -iname "*libGL.so*" -exec ls -l -- {} +
+
+# デバッグ画面の起動
+LIBGL_DEBUG=verbose glxgears
+
+apt install libgl1-mesa-glx libegl1-mesa
+
+
+
+sudo apt-get update -y
+
+apt update
+
+# nvidiaリポジトリを追加
+sudo add-apt-repository ppa:graphics-drivers/ppa
+
+apt install ubuntu-drivers-common
+
+ubuntu-drivers devices
+
+# とりあえずアップデート
+
+# GLUT ( freeglut)をインストールしていきます。
+sudo apt install freeglut3 freeglut3-dev
+
+apt install libglu1-mesa-dev mesa-common-dev
+
+apt install nvidia-current-updates
+
+libGL error: No matching fbConfigs or visuals found
+libGL error: failed to load driver: swrast
+
+# エラー対策
+echo "export LIBGL_ALWAYS_INDIRECT=1" >> ~/.bashrc
+source ~/.bashrc
+
+# バージョン確認
+(pifu) root@GARNET:~/to_PIFu_MMD# glxinfo | grep version
+server glx version string: 1.4
+client glx version string: 1.4
+GLX version: 1.4
+OpenGL version string: 1.4 (4.6.0 NVIDIA 441.66)
+
+apt upgrade
+
+sudo add-apt-repository ppa:ubuntu-x-swat/updates
+apt update
+apt upgrade
+
+
+(pifu) root@GARNET:~/to_PIFu_MMD# glxinfo | grep OpenGL
+OpenGL vendor string: NVIDIA Corporation
+OpenGL renderer string: GeForce GTX 1080/PCIe/SSE2
+OpenGL version string: 1.4 (4.6.0 NVIDIA 441.66)
+OpenGL extensions:
+
+# Mesaのインストール
+sudo add-apt-repository ppa:kisak/kisak-mesa
+sudo apt update
+apt upgrade
+apt install mesa
+
+python -m apps.render_data -i /mnt/c/MMD/PIFu_MMD/rp_dennis_posed_004_OBJ -o /mnt/c/MMD/PIFu_MMD/train_data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+conda install -c conda-forge pyembree 
+
+python -m apps.prt_util -i /mnt/c/MMD/PIFu_MMD/rp_dennis_posed_004_OBJ
+
+sudo apt-get install libopenexr-dev
+pip install pyexr
+
+sudo apt-get install python-opengl
+pip install PyOpenGL PyOpenGL_accelerate
+
+http://shikachii.hatenablog.com/entry/2017/10/02/004837
+
+Xming-6-9-0-31-setup.exe
+Xming-fonts-7-7-0-10-setup.exe
+
+export DISPLAY=localhost:0.0
+
+sudo apt-get install x11-apps
+
+echo "export DISPLAY=\$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0.0" >> ~/.bashrc
+source ~/.bashrc
+
+sudo apt install ubuntu-desktop mesa-utils
+xeyes &
+
+sudo apt install libgl1-mesa-dri libegl1-mesa libgbm1
+
+pip install PyOpenGL
+
+# GLUT ( freeglut)をインストールしていきます。
+sudo apt-get install freeglut3 freeglut3-dev
+
+# Mesa 3Dの開発パッケージをインストールしていきます。
+sudo apt-get install libglu1-mesa-dev mesa-common-dev
+
+sudo apt install libegl1
+
+glxinfo | grep version
+
+sudo apt update
+# nvidiaリポジトリを追加
+sudo add-apt-repository ppa:graphics-drivers/ppa
+ubuntu-drivers devices
+# とりあえずアップデート
+sudo apt install nvidia-driver-440
+
+python -m apps.render_data -i /mnt/c/MMD/PIFu_MMD/rp_dennis_posed_004_OBJ -o /mnt/c/MMD/PIFu_MMD/train_data
+
+
+

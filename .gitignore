@@ -1,1 +1,14 @@
 checkpoints/*
+lib/
+results/
+sample_images/
+apps/
+checkpoints_org/
+results_org/
+*.deb
+Anaconda3-2020.11-Linux-x86_64.sh
+rp_dennis_posed_004_OBJ/
+*.whl
+train_data/
+*.run
+config.xlaunch
